@@ -1,5 +1,6 @@
 
-- hosts: localhost
+- name: Playbook to setup prerequisites
+  hosts: localhost
   vars:
     OSP_GUID: "{{ lookup('env','OSP_GUID') }}"
     OSP_DOMAIN: "{{ lookup('env','OSP_DOMAIN') }}"

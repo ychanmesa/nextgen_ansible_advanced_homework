@@ -1,4 +1,5 @@
-- hosts: localhost
+- name: Play to configure Ansible Tower
+  hosts: localhost
   gather_facts: false 
   become: yes 
   roles:

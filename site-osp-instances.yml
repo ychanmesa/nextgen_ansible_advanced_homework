@@ -1,6 +1,5 @@
-- hosts: localhost
-  connection: local
-  become: no
-  gather_facts: true
+- name: play to create osp instances
+  hosts: workstation
+  become: yes
   roles:
    - osp-servers

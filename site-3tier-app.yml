@@ -1,4 +1,6 @@
-- hosts: workstation
+
+- name: Play to deploy 3 tier apps
+  hosts: workstation
   gather_facts: true
   roles:
   - name: osp-facts
