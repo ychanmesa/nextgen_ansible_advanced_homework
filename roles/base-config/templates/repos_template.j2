@@ -1,25 +1,25 @@
-# "Ansible generated"
+# {{ ansible_managed }}
 [rhel-7-server-rpms]
 name=Red Hat Enterprise Linux 7
-baseurl=http://{{ local_repo_path }}/repos/rhel-7-server-rpms
+baseurl={{ own_repo_path }}/rhel-7-server-rpms
 enabled=1
 gpgcheck=0
 
 [rhel-7-server-rh-common-rpms]
 name=Red Hat Enterprise Linux 7 Common
-baseurl=http://{{ local_repo_path }}/repos/rhel-7-server-rh-common-rpms
+baseurl={{ own_repo_path }}/rhel-7-server-rh-common-rpms
 enabled=1
 gpgcheck=0
 
 [rhel-7-server-extras-rpms]
 name=Red Hat Enterprise Linux 7 Extras
-baseurl=http://{{ local_repo_path }}/repos/rhel-7-server-extras-rpms
+baseurl={{ own_repo_path }}/rhel-7-server-extras-rpms
 enabled=1
 gpgcheck=0
 
 [rhel-7-server-optional-rpms]
 name=Red Hat Enterprise Linux 7 Optional
-baseurl=http://{{ local_repo_path }}/repos/rhel-7-server-optional-rpms
+baseurl={{ own_repo_path }}/rhel-7-server-optional-rpms
 enabled=1
 gpgcheck=0
 
@@ -30,3 +30,5 @@ mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-7&arch=$basearch
 failovermethod=priority
 enabled=1
 gpgcheck=0
+#gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+
