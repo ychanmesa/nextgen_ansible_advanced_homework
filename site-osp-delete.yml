@@ -1,4 +1,4 @@
-- name: play to delete osp instances
+- name: playbook to delete osp instances
   hosts: workstation
   become: yes
   roles:

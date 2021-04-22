@@ -1,4 +1,4 @@
-- name: Play to smoketest app in aws
+- name: Playbook to smoketest app in aws
   hosts: frontends
   gather_facts: false
   tasks:

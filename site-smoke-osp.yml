@@ -1,4 +1,4 @@
-- name: Play to smoketest app in osp
+- name: Playbook to smoketest app in osp
   hosts: workstation
   gather_facts: false
   tasks:

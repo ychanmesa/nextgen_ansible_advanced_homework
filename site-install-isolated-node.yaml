@@ -1,4 +1,4 @@
-- name: Play to install isolated node to Ansible Tower
+- name: Playbook to install isolated node to Ansible Tower
   hosts: localhost
   vars:
     OSP_GUID: "{{ lookup('env','OSP_GUID') }}"

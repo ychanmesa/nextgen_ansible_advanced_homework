@@ -1,4 +1,4 @@
-- name: play to create osp instances
+- name: Playbook to create osp instances
   hosts: workstation
   become: yes
   roles:
