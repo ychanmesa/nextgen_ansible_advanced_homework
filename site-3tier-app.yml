@@ -12,12 +12,19 @@
     - {name: base-config, tags: base-config}
     - {name: db-tier, tags: [dbs, postgres]}
 
+- name: gather fact for apps and load-balancers
+  hosts: apps:frontends 
+  tasks:
+  - name: print all available facts
+    ansible.builtin.debug:
+      var: ansible_facts
+
 # Setup application servers tier
 
 - name: setup app tier
   hosts: apps
   become: yes
-  gather_facts: true
+  gather_facts: false
   roles:
     - {name: base-config, tags: base-config}
     - {name: app-tier, tags: [apps, tomcat]}
@@ -27,6 +34,7 @@
 - name: setup load-balancer tier
   hosts: frontends
   become: yes
+  gather_facts: false
   roles:
     - {name: base-config, tags: base-config}
     - {name: lb-tier, tags: [lbs, haproxy]}
