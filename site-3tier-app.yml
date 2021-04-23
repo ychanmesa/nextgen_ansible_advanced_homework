@@ -7,7 +7,7 @@
 
 - name: setup database tier
   become: yes
-  hosts: appdbs:tag_AnsibleGroup_appdbs
+  hosts: appdbs
   roles:
     - {name: base-config, tags: base-config}
     - {name: db-tier, tags: [dbs, postgres]}
@@ -15,7 +15,7 @@
 # Setup application servers tier
 
 - name: setup app tier
-  hosts: apps:tag_AnsibleGroup_apps
+  hosts: apps
   become: yes
   gather_facts: false
   roles:
@@ -25,7 +25,7 @@
 # Setup front-end load balancer tier
 
 - name: setup load-balancer tier
-  hosts: frontends:tag_AnsibleGroup_frontends
+  hosts: frontends
   become: yes
   roles:
     - {name: base-config, tags: base-config}
